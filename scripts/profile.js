@@ -18,7 +18,7 @@ function manageNamesArray(){
 	var allTheNames = [];
 	allTheNames = allTheNamesStore.innerHTML.split(',');
 	return allTheNames;
-};
+}
 
 var namesArray = [];
 
