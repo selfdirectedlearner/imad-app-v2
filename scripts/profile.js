@@ -5,14 +5,14 @@ var nameList = document.getElementById("nameList");
 
 function initPage(){
 	nameInput.focus();
-};
+}
 
 function indent() {document.execCommand("indent");}
 
 function outdent() {document.execCommand("outdent");}
 
 var addName = function(){
-	if(nameInput.value != ""){
+	if(nameInput.value !== ""){
 		var name = nameInput.value;
 		nameList.innerHTML += '<li>' + name + '</li>';
 		nameInput.value = "";
@@ -30,7 +30,7 @@ nameInput.addEventListener("keydown", function (e) {
 	}
 	if(e.which==9){
         e.preventDefault();
-        if(e.shiftKey==true){
+        if(e.shiftKey===true){
             outdent();
         }
         else{
