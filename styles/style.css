@@ -63,4 +63,4 @@ body {
     font-weight:900;
 }
 
-#nameList{overflow-y:scroll; max-height:250px;}
+#nameList{overflow-y:scroll --moz-kit; max-height:250px;}
