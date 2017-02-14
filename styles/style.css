@@ -64,3 +64,4 @@ body {
 }
 
 #nameList{overflow-y:scroll; max-height:250px;}
+#namesShown{overflow-y:scroll; max-height:250px;}
