@@ -4,6 +4,7 @@ var nameBtn = document.getElementById("nameBtn");
 var nameList = document.getElementById("nameList");
 var showNames = document.getElementById("showNames");
 var namesShown = document.getElementById("namesShown");
+var namesShownDiv = document.getElementById("namesShownDiv");
 var allTheNamesStore = document.getElementById("allTheNamesStore");
 
 function initPage(){
@@ -41,8 +42,9 @@ nameBtn.onclick = function(){
 };
 
 showNames.onclick = function(){
+    namesShownDiv.innerHTML = "<strong>All the names entered till now, as stored in the local storage:</strong>";
 	var namesArrayPre = manageNamesArray();
-	namesShown.innerHTML = '<p><strong>All the names entered till now, as stored in the local storage:</strong></p>';
+	namesShown.innerHTML = '';
 	for(var i = 0; i < namesArrayPre.length; i++){
 		namesShown.innerHTML += '<li>' + namesArrayPre[i] + '</li>';
 	}
