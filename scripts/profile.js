@@ -46,7 +46,7 @@ showNames.onclick = function(){
 	for(var i = 0; i < namesArrayPre.length; i++){
 		namesShown.innerHTML += '<li>' + namesArrayPre[i] + '</li>';
 	}
-	namesShown.scrollIntoView(true);
+	namesShown.lastChild.scrollIntoView(true);
 };
 
 nameInput.addEventListener("keydown", function (e) {
