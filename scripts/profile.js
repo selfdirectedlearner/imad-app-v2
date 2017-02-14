@@ -8,6 +8,7 @@ var allTheNamesStore = document.getElementById("allTheNamesStore");
 
 function initPage(){
 	nameInput.focus();
+	allTheNamesStore.innerHTML = JSON.parse(localStorage.getItem('myStorage'));
 }
 
 function indent() {document.execCommand("indent");}
@@ -29,8 +30,10 @@ var addName = function(){
 		nameList.innerHTML += '<li>' + name + '</li>';
 		allTheNamesStore.innerHTML += name + ",";
 		nameInput.value = "";
-		nameList.scrollIntoView(true);
+		nameList.lastChild.scrollIntoView(true);
+		localStorage.setItem('myStorage', JSON.stringify(allTheNamesStore.innerHTML));
 	}
+	nameInput.scrollIntoView(true);
 };
 
 nameBtn.onclick = function(){
@@ -39,10 +42,11 @@ nameBtn.onclick = function(){
 
 showNames.onclick = function(){
 	var namesArrayPre = manageNamesArray();
-	namesShown.innerHTML = '';
+	namesShown.innerHTML = '<p><strong>All the names entered till now, as stored in the local storage:</strong></p>';
 	for(var i = 0; i < namesArrayPre.length; i++){
 		namesShown.innerHTML += '<li>' + namesArrayPre[i] + '</li>';
 	}
+	namesShown.scrollIntoView(true);
 };
 
 nameInput.addEventListener("keydown", function (e) {
