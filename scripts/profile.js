@@ -42,7 +42,7 @@ nameBtn.onclick = function(){
 };
 
 showNames.onclick = function(){
-    namesShownDiv.innerHTML = "<strong>All the names entered till now, as stored in the local storage:</strong>" + namesShownDiv.innerHTML ;
+    namesShownDiv.innerHTML = "<strong>All the names entered till now, as stored in the local storage:</strong>";
 	var namesArrayPre = manageNamesArray();
 	namesShown.innerHTML = '';
 	for(var i = 0; i < namesArrayPre.length; i++){
